@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
-    <title>torobrine&apos;s little room</title>
-    <updated>2020-07-10T10:49:52.327Z</updated>
+    <title>torobrine&apos;s blog</title>
+    <updated>2020-07-10T10:51:01.954Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
     <subtitle>这是torobrine的Github网站</subtitle>
     <logo>https://torobrine.github.io/images/avatar.png</logo>
     <icon>https://torobrine.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, torobrine&apos;s little room</rights>
+    <rights>All rights reserved 2020, torobrine&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://torobrine.github.io/post/hello-gridea/</id>
