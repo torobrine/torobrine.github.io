@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://torobrine.github.io</id>
+    <id>https://torobrine.github.io/</id>
     <title>torobrine | Coding</title>
-    <updated>2020-07-10T05:34:31.833Z</updated>
+    <updated>2020-07-10T05:35:01.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://torobrine.github.io"/>
+    <link rel="alternate" href="https://torobrine.github.io/"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
     <subtitle>&quot;如果奇迹有颜色，那一定是橙色&quot;</subtitle>
     <logo>https://torobrine.github.io/images/avatar.png</logo>
