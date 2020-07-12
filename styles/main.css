@@ -2062,7 +2062,13 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    body {
+    @font-face {
+      font-family: '方正清刻本悦宋简体.TTF';
+      src: url('/media/fonts/方正清刻本悦宋简体.TTF.ttf');
+    }
+    * {
+        font-family: '方正清刻本悦宋简体.TTF';
+    }body {
       color: #555;
     }
     .next-md-body {
