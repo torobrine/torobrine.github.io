@@ -2184,15 +2184,15 @@ body {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: default;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\Arrow.ani.cur'), default;
     }a {
-      cursor: pointer;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\hand.ani.cur'), pointer !important;
     }input, textarea, code {
-      cursor: text;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\Arrow.ani.cur'), text !important;
     }code > span.copy-code {
-      cursor: pointer;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\IBeam.ani.cur'), text !important;
     }.post img {
-      cursor: zoom-in;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\Arrow.ani.cur'), zoom-in !important;
     }.post img {
-      cursor: zoom-out;
+      cursor: url('/media/curs/C:\Users\Administrator\Documents\Gridea\themes\next\assets\media\curs\Arrow.ani.cur'), zoom-out !important;
     }
