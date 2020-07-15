@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
     <title>torobrine&apos;s blog</title>
-    <updated>2020-07-12T06:42:57.495Z</updated>
+    <updated>2020-07-15T04:55:31.164Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
@@ -10,6 +10,179 @@
     <logo>https://torobrine.github.io/images/avatar.png</logo>
     <icon>https://torobrine.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, torobrine&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[题解 P5917 【[IOI1995]铺放矩形块】]]></title>
+        <id>https://torobrine.github.io/post/ti-jie-p5917-ioi1995pu-fang-ju-xing-kuai/</id>
+        <link href="https://torobrine.github.io/post/ti-jie-p5917-ioi1995pu-fang-ju-xing-kuai/">
+        </link>
+        <updated>2020-07-14T06:49:04.000Z</updated>
+        <content type="html"><![CDATA[<p>本题的主要思路是先画出矩形的几种基本布局，然后枚举每种情况，最后全排列输出，下面我将给大家逐一分析。</p>
+<hr>
+<h3 id="step1"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mi>e</mi><mi>p</mi><mn>1</mn><mo>:</mo></mrow><annotation encoding="application/x-tex">step1:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></h3>
+<p>先读题:&quot;给定 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 个矩形块，找出一个最小的封闭矩形将这 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形块放入，但不得相互重叠。&quot;</p>
+<p>不得重叠好办，我们只要把<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形块摆放在不同的位置，再枚举情况就好了！<img src="https://torobrine.github.io/post-images/1594710940402.jpg" alt="" loading="lazy"></p>
+<p>这时有人就要说了：那摆放位置这么多，你叫我枚举到昏天黑地啊<img src="https://torobrine.github.io/post-images/1594711058631.jpg" alt="" loading="lazy"></p>
+<p>别急，我们只用找出这<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形块的<strong>基本布局</strong>，其他的则都由这种/些布局<strong>旋转、翻转</strong>而成，例如下面：<img src="https://torobrine.github.io/post-images/1594721579075.jpg" alt="" loading="lazy"></p>
+<p>经过这样一番操作，<s>很快</s>就得到了以下这<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span>种：<img src="https://torobrine.github.io/post-images/1594722137856.jpg" alt="" loading="lazy"></p>
+<p>然后就开始进行下一步，模拟枚举各种情况。</p>
+<hr>
+<h3 id="step2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mi>e</mi><mi>p</mi><mn>2</mn><mo>:</mo></mrow><annotation encoding="application/x-tex">step2:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></h3>
+<p>先看第一种布局，是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形块并排放，所以那个最小封闭矩形的水平边（以下简称<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>）就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形块的水平边，垂直的边（以下简称<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>）就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>矩形中最长矩形的垂直边。</p>
+<pre><code>//case1：
+re.x=0; re.y=0;
+for(int i=0;i&lt;4;++i){
+	re.x+=a[i].x;//累加每个矩形的x
+	if(a[i].y&gt;re.y)re.y=a[i].y;//如果有更长的就更新
+}
+</code></pre>
+<p>第二种布局和第一种类似，但是要考虑横着的矩形，所以我们先处理后<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>个矩形的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>，如果第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>个矩形的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>大于现有的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>，就更新，然后再加上第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>个矩形的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>。</p>
+<pre><code>//case2:
+re.x=0;re.y=0;
+for(int i=1;i&lt;4;++i){//处理后三个矩形
+	re.x+=a[i].x;//累加x
+	if(a[i].y&gt;re.y)re.y=a[i].y;//更新长度
+}
+if(a[0].x&gt;re.x)re.x=a[0].x;//如果第1个矩形的x大于现有的x，就更新
+re.y+=a[0].y;//加上第1个矩形的y
+</code></pre>
+<p>第三种布局的方法就不同了,它直接找出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>个矩形组合起来最大的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>。</p>
+<pre><code>//case3:
+re.x=max(a[0].x+a[1].x,a[2].x)+a[3].x;//第1个矩形+第2个矩形的x和第3个矩形的x相比较，谁大就和第4个矩形的x相加
+re.y=max(max(a[0].y,a[1].y)+a[2].y,a[3].y);//首先第1个矩形的y和第2个矩形的y相比较，谁大，谁就加上第3个矩形的y，再和第4个矩形的y比较。
+</code></pre>
+<p>第四种与第三种相似，就不细说了。</p>
+<pre><code>//case4:
+re.x=a[0].x+max(a[1].x,a[2].x)+a[3].x;
+re.y=max(max(a[0].y,a[1].y+a[2].y),a[3].y);
+//可以根据样例带入图比较
+</code></pre>
+<p>第五种布局比较麻烦，需要多次比较与更新<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>。</p>
+<pre><code>//case5:
+re.x=a[0].x+a[1].x;//先初始x值为第1个矩形和第2个矩形的x之和
+re.y=max(a[0].y+a[2].y,a[1].y+a[3].y);//判断这两个的y谁更长，具体可以带入图中看看
+if(a[0].y&lt;a[1].y)
+	re.x=max(re.x,a[2].x+a[1].x);
+if(a[0].y+a[2].y&gt;a[1].y)
+	re.x=max(re.x,a[2].x+a[3].x);
+if(a[1].y&lt;a[0].y)
+	re.x=max(re.x,a[0].x+a[3].x);
+//根据几条y的长度来更新x值
+re.x=max(re.x,a[2].x);
+re.x=max(re.x,a[3].x);
+//再逐一比较x值是否大于每个矩形块的x
+</code></pre>
+<hr>
+<h3 id="step3"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mi>e</mi><mi>p</mi><mn>3</mn><mo>:</mo></mrow><annotation encoding="application/x-tex">step3:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></h3>
+<p>经过艰辛的枚举，我们终于得到了这个最小封闭矩形的面积，可我们还要输出所有可能的边长，这时就要用到<strong>全排列</strong>了。</p>
+<pre><code>void dfs(int k){
+    if(k==4){
+        Calc();//如果k=4就继续枚举
+    }else{
+        for(int i=k;i&lt;4;++i){
+            dfs(k+1);swap(a[k].x, a[k].y);
+            dfs(k+1);swap(a[k].x, a[k].y);
+            //两次递归交换边长
+            swap(a[k], a[i]);
+            dfs(k+1);
+            swap(a[k], a[i]);
+            //经过一次次的循环递归最后得出结果
+        }
+    }
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>S</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">PS:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>不了解全排列的请自行搜索，我这里就不百科了。</p>
+<hr>
+<p>这三步完成之后，就剩下一些输入输出和更新面积之类的小问题，可以看下面的代码和注释。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>C</mi><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">AC Code</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span></span></span></span>:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct ret{
+    int x,y;
+}a[4],re;
+int rec=10000,res[101];
+void area(){
+    if(re.x*re.y&lt;rec){
+        rec=re.x*re.y;//如果有更小的面积就更新
+        memset(res,0,sizeof(res));//清空数组
+    }
+    if(re.x*re.y==rec){
+        res[min(re.x,re.y)]=1;//如果刚好等于rec，则更小的边长重新赋值为1
+    }
+}
+void Calc(){
+    //case1:
+	re.x=0; re.y=0;
+    for(int i=0;i&lt;4;++i){
+	    re.x+=a[i].x;//累加每个矩形的x
+	    if(a[i].y&gt;re.y)re.y=a[i].y;//如果有更长的就更新
+    }
+	area();//更新面积
+
+    //case2:
+	re.x=0;re.y=0;
+    for(int i=1;i&lt;4;++i){//处理后三个矩形
+	    re.x+=a[i].x;//累加x
+	    if(a[i].y&gt;re.y)re.y=a[i].y;//更新长度
+    }
+    if(a[0].x&gt;re.x)re.x=a[0].x;//如果第1个矩形的x大于现有的x，就更新
+    re.y+=a[0].y;//加上第1个矩形的y
+	area();
+
+    //case3:
+    re.x=max(a[0].x+a[1].x,a[2].x)+a[3].x;//第1个矩形+第2个矩形的x和第3个矩形的
+    x相比较，谁大就和第4个矩形的x相加
+    re.y=max(max(a[0].y,a[1].y)+a[2].y,a[3].y);//首先第1个矩形的y和第2个矩形的
+    y相比较，谁大，谁就加上第3个矩形的y，再和第4个矩形的y比较。
+	area();
+
+    //case4:
+	re.x=a[0].x+max(a[1].x,a[2].x)+a[3].x;
+	re.y=max(max(a[0].y,a[1].y+a[2].y),a[3].y);
+    //可以根据样例带入图比较
+	area();
+
+    //case5:
+    re.x=a[0].x+a[1].x;//先初始x值为第1个矩形和第2个矩形的x之和
+    re.y=max(a[0].y+a[2].y,a[1].y+a[3].y);//判断这两个的y谁更长，具体可以带入图中看看
+    if(a[0].y&lt;a[1].y)
+        re.x=max(re.x,a[2].x+a[1].x);
+    if(a[0].y+a[2].y&gt;a[1].y)
+        re.x=max(re.x,a[2].x+a[3].x);
+    if(a[1].y&lt;a[0].y)
+        re.x=max(re.x,a[0].x+a[3].x);
+    //根据几条y的长度来更新x值
+    re.x=max(re.x,a[2].x);
+    re.x=max(re.x,a[3].x);
+    //再逐一比较x值是否大于每个矩形块的x
+	area();
+}
+void dfs(int k){
+    if(k==4){
+        Calc();//如果k=4就继续枚举
+    }else{
+        for(int i=k;i&lt;4;++i){
+            dfs(k+1);swap(a[k].x, a[k].y);
+            dfs(k+1);swap(a[k].x, a[k].y);
+            //两次递归交换边长
+            swap(a[k], a[i]);
+            dfs(k+1);
+            swap(a[k], a[i]);
+            //经过一次次的循环递归最后得出结果
+        }
+    }
+}
+int main(){
+    for(int i=0;i&lt;4;++i)
+        cin&gt;&gt;a[i].x&gt;&gt;a[i].y;
+	dfs(0);
+	cout&lt;&lt;rec&lt;&lt;endl;
+	for(int i=1;i&lt;=100;++i)
+		if(res[i]) cout&lt;&lt;i&lt;&lt;&quot; &quot;&lt;&lt;rec/i&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[最短路学习笔记 · Floyd篇]]></title>
         <id>https://torobrine.github.io/post/zui-duan-lu-xue-xi-bi-ji-floyd-pian/</id>
