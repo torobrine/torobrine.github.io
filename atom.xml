@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
     <title>torobrine&apos;s blog</title>
-    <updated>2020-07-15T05:03:40.203Z</updated>
+    <updated>2020-07-15T05:07:25.086Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
@@ -181,6 +181,7 @@ int main(){
     return 0;
 }
 </code></pre>
+<p>本题解同步发表于<a href="https://www.luogu.com.cn/blog/227962/solution-p5917">洛谷博客</a></p>
 ]]></content>
     </entry>
     <entry>
