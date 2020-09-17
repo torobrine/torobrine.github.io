@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
     <title>torobrine&apos;s blog</title>
-    <updated>2020-08-05T04:01:40.595Z</updated>
+    <updated>2020-09-17T05:00:58.558Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://torobrine.github.io/images/avatar.png</logo>
     <icon>https://torobrine.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, torobrine&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[链接群]]></title>
+        <id>https://torobrine.github.io/post/lian-jie-qun/</id>
+        <link href="https://torobrine.github.io/post/lian-jie-qun/">
+        </link>
+        <updated>2020-09-17T04:58:29.000Z</updated>
+        <content type="html"><![CDATA[<p>这里会存放一些挂在blog下面的小程序：</p>
+<p><a href="torobrine.github.io/cal">计算器</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[题解 P5875 【[IOI2014]friend 朋友】]]></title>
         <id>https://torobrine.github.io/post/ti-jie-p5875-ioi2014friend-peng-you/</id>
