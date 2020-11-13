@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
-    <title>torobrine&apos;s blog</title>
-    <updated>2020-11-13T11:38:47.481Z</updated>
+    <title>Zona&apos;s Blog</title>
+    <updated>2020-11-13T11:49:16.792Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
-    <subtitle>这是torobrine的Github网站</subtitle>
+    <subtitle>这是Zona的Github网站</subtitle>
     <logo>https://torobrine.github.io/images/avatar.png</logo>
     <icon>https://torobrine.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, torobrine&apos;s blog</rights>
+    <rights>All rights reserved 2020, Zona&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[CSP爆零记&&OI史回顾]]></title>
         <id>https://torobrine.github.io/post/csp-bao-ling-ji-andoi-shi-hui-gu/</id>

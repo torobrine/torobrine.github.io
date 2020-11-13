@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="Gridea静态个人博客">
-<meta name="description" content="这是torobrine的Github网站">
+<meta name="description" content="这是Zona的Github网站">
 <meta name="theme-color" content="#000">
-<title>题解 P5875 【[IOI2014]friend 朋友】 | torobrine&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1605267516490">
+<title>题解 P5875 【[IOI2014]friend 朋友】 | Zona&#39;s Blog</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1605268152093">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -60,12 +60,12 @@
         <div class="site-title">
           
             <a href="/" class="brand">
-              <span>torobrine&#39;s blog</span>
+              <span>Zona&#39;s Blog</span>
             </a>  
           
         </div>
         
-          <p class="subtitle">精于心，简于形</p>
+          <p class="subtitle">那些曾经眷恋的光景，现在已成美好回忆</p>
         
       </div>
       <nav class="site-nav" id="site_nav">
@@ -208,11 +208,11 @@
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">torobrine</p>
+    <p class="site-author-name">Zona</p>
     
     <div class="site-description right-motion">
       
-        <p id="binft">蒟蒻OIer</p>
+        <p id="binft">绘画人&amp;&amp;OIer</p>
       
     </div>
     
@@ -641,7 +641,7 @@ int main(){
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong class="language" data-lan="author">本文作者：</strong>
-      torobrine
+      Zona
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
@@ -717,6 +717,36 @@ int main(){
   <div id="landlord" style="left: 5px;bottom: 3px;"
     data-key="">
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+        <input name="live2dBGM" value="" type="hidden">
+        
+      </div>
     
   </div>
 </div>
@@ -2276,13 +2306,13 @@ int main(){
 </script>
 
 
-<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-<script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
+<script src="/media/js/mouse/love.js"></script>
 
 
 <script src="/media/js/cool.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
 
 </html>
