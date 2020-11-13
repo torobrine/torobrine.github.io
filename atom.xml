@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://torobrine.github.io</id>
     <title>torobrine&apos;s blog</title>
-    <updated>2020-09-17T05:09:33.305Z</updated>
+    <updated>2020-11-13T11:38:47.481Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://torobrine.github.io"/>
     <link rel="self" href="https://torobrine.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://torobrine.github.io/images/avatar.png</logo>
     <icon>https://torobrine.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, torobrine&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[CSP爆零记&&OI史回顾]]></title>
+        <id>https://torobrine.github.io/post/csp-bao-ling-ji-andoi-shi-hui-gu/</id>
+        <link href="https://torobrine.github.io/post/csp-bao-ling-ji-andoi-shi-hui-gu/">
+        </link>
+        <updated>2020-11-13T10:58:08.000Z</updated>
+        <content type="html"><![CDATA[<p>一晃，我已经三个多月没更过blog了，通过今年这次，除了骂S组T1出题人外，也真的是把我一巴掌打回了现实。</p>
+<p>“你还差得远呢。”</p>
+<p>qs，这一年，我的确没有学真正意义上的新东西，也就提升了点应用能力。但这明显不够。</p>
+<p>一开始，我到外面找老师，想要正规学一点东西。但可惜，他们都按着自己的速度教，我眼睁睁地看着一群已经初三、高一的学生，学了两年多才参加J组。可能，这些学生也就是拿个证书玩玩，毕竟是培训机构......</p>
+<p>于是，我只能自学，啃也啃不动的紫书，网上成堆的文章视频，都有浏览。可进步实在微薄。我听过无数次这样的话：</p>
+<p>“她才六年级，太小了，慢慢来，到时候拿个1=也不错啊。”</p>
+<p>我无话可说，看似，OI生涯很长，但是，在现在的政策下，只剩四年了。我没有机会，也不应该再爆零了。他们没有意识到，我的梦可能过于庞大，甚至无法实现。这也是为什么，绝大多数的少儿编程，都拘泥于OI入门阶段。</p>
+<p>老师也错误地认为，“OI不就是电竞、编程嘛~ 这种兴趣等你考了满分再搞啊~ 这对数学有什么帮助，切。”</p>
+<p>恐怕您是真不知道多项式是啥，微分方程是啥，就连最基础的入门题都有比和比例</p>
+<p>又一个被洗脑的╮(╯﹏╰）╭</p>
+<p>---------------------------------------------停滞不前的n个月---------------------------------------------</p>
+<p>CSP到了，J初赛没过，S过了（玄学？</p>
+<p>S第一道题被Julian搞死，爆零。</p>
+<p>T1出大模拟就很离谱。。。最后一秒，我还是没有推出来一个正确答案(;´༎ຶД༎ຶ`)</p>
+<p>（Julian出题人塞翁失🐴）</p>
+<hr>
+<p>最后，我明白了，怀念过去和憧憬未来，很大一部分都是浪费时间，不如立足现在，珍惜当下的一分一秒才是真谛。加油！OI人！</p>
+<p>顺带一提，不要被一些自学毒鸡汤（例每天学一个算法，然后说自己是自学）给骗了！一定要自己学到哪练到哪，一步一个脚印，这些打着“自学”的反而会让你盲目自信，抄几遍题解就自认为学会了，然后颓废，然后爆零，产生一个恶性循环。惨痛经历证明，希望大家记住QAQ</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[题解 P5875 【[IOI2014]friend 朋友】]]></title>
         <id>https://torobrine.github.io/post/ti-jie-p5875-ioi2014friend-peng-you/</id>
